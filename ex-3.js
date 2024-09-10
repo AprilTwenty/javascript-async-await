@@ -33,3 +33,29 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+function displayJohnProfile(data){
+  console.log(data);
+}
+function displayJohnOrder(data){
+  console.log(data);
+}
+getJohnProfile()
+.then(displayJohnProfile)
+.then(getJohnOrders)
+.then(displayJohnOrder);
+
+/*   แบบ fucntion arrow
+let displayJohnProfile = (data) => {console.log(data)};
+let displayJohnOrder = (data)=> {console.log(data)};
+getJohnProfile().then(displayJohnProfile).then(getJohnOrders).then(displayJohnOrder);
+*/
+
+/* แบบ async / await
+async function getData(){
+  let firstData = await getJohnProfile();
+  console.log(firstData);
+  let secondData = await getJohnOrders();
+  console.log(secondData);
+}
+getData();
+*/
